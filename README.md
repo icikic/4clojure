@@ -1,10 +1,10 @@
 # for-clojure
 
-A Clojure library designed to ... well, that part is up to you.
+4clojure.com problem solutions
 
 ## Usage
 
-FIXME
+N/A
 
 ## License
 
