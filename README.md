@@ -1,6 +1,6 @@
 # for-clojure
 
-4clojure.com problem solutions
+[www.4clojure.com] problem solutions
 
 ## Usage
 
