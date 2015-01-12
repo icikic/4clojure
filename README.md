@@ -1,6 +1,6 @@
 # for-clojure
 
-[www.4clojure.com] problem solutions
+www.4clojure.com solutions
 
 ## Usage
 
@@ -8,7 +8,4 @@ N/A
 
 ## License
 
-Copyright © 2015 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+N/A
