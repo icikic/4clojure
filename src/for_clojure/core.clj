@@ -67,3 +67,48 @@
   "A function which removes consecutive duplicates from a sequence."
   [s]
   (map first (partition-by identity s)))
+
+;; 31
+(defn pack-seq
+  "A function which packs consecutive duplicates into sub-lists."
+  [s]
+  (partition-by identity s))
+
+;; 32
+(defn dupl-seq
+  "A function which duplicates each element of a sequence."
+  [s]
+  (mapcat (fn [x] [x x]) s))
+
+;; 33
+(defn repl-seq
+  "A function which replicates each element of a sequence a variable number of times."
+  [s n]
+  (mapcat (fn [x] (repeat n x))  s))
+
+;; 34
+(defn my-range
+  "A function which creates a list of all integers in a given range."
+  [start end]
+  (take (- end start) (iterate inc start)))
+
+;; 38
+(defn my-max
+  "A function which takes a variable number of parameters and returns the maximum value."
+  [& args]
+  (reduce (fn [x y] (if (> x y) x y)) args))
+
+;; 39
+(defn my-interleave
+  "A function which takes two sequences and returns the first item from each,
+  then the second item from each, then the third, etc."
+  [& colls]
+  (mapcat (fn [& x] x) colls))
+
+;; 40
+(defn my-interpose
+  "A function which separates the items of a sequence by an arbitrary value."
+  [x s]
+  (drop-last (mapcat #([%1 x])) s))
+
+
