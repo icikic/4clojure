@@ -111,11 +111,29 @@
   [x s]
   (drop-last (mapcat #([%1 x])) s))
 
+;; 41
+(defn drop-nth
+  "A function which drops every Nth item from a sequence."
+  [s n]
+  (mapcat (partial take (dec n)) (partition-all n s)))
+
+;; 42
+(defn factorial
+  "A function which calculates factorials."
+  [x]
+  (loop [n x
+         f 1]
+    (if (= n 1)
+      f
+      (recur (dec n) (* f n)))))
+
+(defn factorial-v2 [n]
+  (reduce * (range 1 (inc n))))
+
+;; 43
+
 ;; 49
 (defn split-seq
   "A function which will split a sequence into two parts."
   [n s]
   (vector (take n s) (drop n s)))
-
-
-
