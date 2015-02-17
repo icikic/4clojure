@@ -111,4 +111,11 @@
   [x s]
   (drop-last (mapcat #([%1 x])) s))
 
+;; 49
+(defn split-seq
+  "A function which will split a sequence into two parts."
+  [n s]
+  (vector (take n s) (drop n s)))
+
+
 
