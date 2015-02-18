@@ -20,3 +20,9 @@
     (is (= (pack-seq [1 1 2 1 1 1 3 3]) '((1 1) (2) (1 1 1) (3 3))))
     (is (= (pack-seq [:a :a :b :b :c]) '((:a :a) (:b :b) (:c))))
     (is (= (pack-seq [[1 2] [1 2] [3 4]]) '(([1 2] [1 2]) ([3 4]))))))
+
+(deftest construct-map-test
+  (testing "Problem 61"
+    (is (= (construct-map [:a :b :c] [1 2 3]) {:a 1, :b 2, :c 3}))
+    (is (= (construct-map [1 2 3 4] ["one" "two" "three"]) {1 "one", 2 "two", 3 "three"}))
+    (is (= (construct-map [:foo :bar] ["foo" "bar" "baz"]) {:foo "foo", :bar "bar"}))))

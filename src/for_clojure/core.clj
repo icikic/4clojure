@@ -137,3 +137,16 @@
   "A function which will split a sequence into two parts."
   [n s]
   (vector (take n s) (drop n s)))
+
+;; 61
+(defn construct-map
+  "A function which takes a vector of keys and a vector of values and constructs a map from them."
+  [keys vals]
+  (loop [map {}
+         ks (seq keys)
+         vs (seq vals)]
+    (if (and ks vs)
+      (recur (assoc map (first ks) (first vs))
+             (next ks)
+             (next vs))
+      map)))
