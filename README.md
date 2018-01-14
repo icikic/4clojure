@@ -1,11 +1,7 @@
 # for-clojure
 
-www.4clojure.com solutions
-
-## Usage
-
-N/A
+Working through www.4clojure.com problems
 
 ## License
 
-N/A
+Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
