@@ -26,3 +26,11 @@
     (is (= (construct-map [:a :b :c] [1 2 3]) {:a 1, :b 2, :c 3}))
     (is (= (construct-map [1 2 3 4] ["one" "two" "three"]) {1 "one", 2 "two", 3 "three"}))
     (is (= (construct-map [:foo :bar] ["foo" "bar" "baz"]) {:foo "foo", :bar "bar"}))))
+
+(deftest rotate-test
+  (testing "Problem 44"
+    (is (= (rotate 2 [1 2 3 4 5]) '(3 4 5 1 2)))
+    (is (= (rotate -2 [1 2 3 4 5]) '(4 5 1 2 3)))
+    (is (= (rotate 6 [1 2 3 4 5]) '(2 3 4 5 1)))
+    (is (= (rotate 1 '(:a :b :c)) '(:b :c :a)))
+    (is (= (rotate -4 '(:a :b :c)) '(:c :a :b)))))

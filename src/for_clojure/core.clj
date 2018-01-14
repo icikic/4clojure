@@ -130,7 +130,12 @@
 (defn factorial-v2 [n]
   (reduce * (range 1 (inc n))))
 
-;; 43
+;; 44
+(defn rotate
+  "A function which can rotate a sequence in either direction."
+  [n s]
+  (let [offset (mod n (count s))]
+    (concat (drop offset s) (take offset s))))
 
 ;; 49
 (defn split-seq
